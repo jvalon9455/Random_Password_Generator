@@ -34,6 +34,10 @@ var pwLength = prompt("Password must be 8-128 characters long. How long would yo
 if (pwLength > 8 && pwLength < 128){
   ("Password length:" + pwLength);
 }
+else{
+  alert("Please enter valid character length.");
+  prompt("Password must be 8-128 characters long. How long would you like yours to be?");
+}
   
 
 
