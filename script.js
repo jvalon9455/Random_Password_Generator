@@ -80,8 +80,14 @@ console.log(chosenCharacters)
 // Create empty string to hold random password
 var randomPassword = "";
 
-// for (var i = 0; i < pwLength; i++){
-//   Math.floor(Math.random()*
+for (var i = 0; i < pwLength; i++) {
+  randomPassword = randomPassword.concat(
+    chosenCharacters[
+      Math.floor(Math.random()* chosenCharacters.length)
+
+    ]
+  );
+  }
 
 
 
