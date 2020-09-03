@@ -21,13 +21,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Added four sets of different character strings to generate password
-
-var lowerString = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperString = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numberString = ["0","1","2","3","4","5","6","7","8","9"];
-var symbolString = ["~`!@#$%^&*()_+-=[]{};:',.<>/?"];
-
 // Prompt user for password length
 var pwLength = prompt("Password must be 8-128 characters long. How long would you like yours to be?");
 
@@ -39,12 +32,27 @@ else{
   prompt("Password must be 8-128 characters long. How long would you like yours to be?");
 }
 //  Ask user if they want lowercase, uppercase, numbers, and/or symbols in their password
-var hasLowercase = confirm("Add lowercase letters to password.");
-var hasUppercase = confirm("Add uppercase letters to password.");
-var hasNumbers = confirm("Add numbers to password.");
-var hasSymbols = confirm("Add symbols to password.");
+var hasLowercase = confirm("Add lowercase letters to password?");
+var hasUppercase = confirm("Add uppercase letters to password?");
+var hasNumbers = confirm("Add numbers to password?");
+var hasSymbols = confirm("Add symbols to password?");
 
+// Added four sets of different character strings to generate password
+
+var lowerString = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperString = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numberString = ["0","1","2","3","4","5","6","7","8","9"];
+var symbolString = ["~`!@#$%^&*()_+-=[]{};:',.<>/?"];  
+
+if (
+  hasLowercase === false &&
+  hasUppercase=== false &&
+  hasNumbers === false &&
+  hasSymbols === false 
+) {
+  alert("Please select one character type to generate password.");
   
+}
 
 
 // Write password to the #password input
